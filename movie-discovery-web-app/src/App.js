@@ -1,7 +1,15 @@
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  return <div>Movie App</div>;
+  const [movies, setMovies] = useState([]);
+  return (
+    <div>
+      {movies.map((moviesReq) => (
+        <MoviesBox />
+      ))}
+    </div>
+  );
 }
 
 export default App;
